@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito's Foundation - Bibirioni Ward</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 15s linear infinite;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .program-card:hover {
+            transform: scale(1.03);
+        }
+        .testimonial-card:hover {
+            background-color: rgba(255,255,255,0.9);
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans smooth-scroll">
+    <!-- Header with Marquee -->
+    <header class="bg-green-700 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <span class="text-green-700 font-bold text-2xl">TF</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-bold">Tito's Foundation</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-green-200 transition">Home</a>
+                    <a href="#about" class="hover:text-green-200 transition">About</a>
+                    <a href="#programs" class="hover:text-green-200 transition">Programs</a>
+                    <a href="#team" class="hover:text-green-200 transition">Team</a>
+                    <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+                </nav>
+                <button id="mobileMenuButton" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="bg-green-800 py-2 overflow-hidden">
+            <p class="marquee text-sm md:text-base px-4">Welcome to Tito's Foundation Bibirioni Ward Website - Transforming Lives Since 2024</p>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-700 px-4 py-2">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-green-200 transition py-1">Home</a>
+                <a href="#about" class="hover:text-green-200 transition py-1">About</a>
+                <a href="#programs" class="hover:text-green-200 transition py-1">Programs</a>
+                <a href="#team" class="hover:text-green-200 transition py-1">Team</a>
+                <a href="#contact" class="hover:text-green-200 transition py-1">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-green-600 to-green-800 text-white py-24 md:py-32">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Bibirioni Ward</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Transforming lives through community development, education, and sports</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#donate" class="bg-white text-green-700 px-8 py-3 rounded-full font-bold hover:bg-green-100 transition shadow-lg">Donate Now</a>
+                <a href="#programs" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-green-700 transition shadow-lg">Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">About Our Foundation</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/2">
+                    <div class="bg-green-50 rounded-lg p-6 mb-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-600">Our Mission</h3>
+                        <p class="text-gray-700">To empower the community of Bibirioni Ward through sustainable development initiatives in education, healthcare, and sports, fostering a brighter future for all residents.</p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-600">Our Vision</h3>
+                        <p class="text-gray-700">A thriving Bibirioni Ward where every individual has access to quality education, healthcare, and opportunities for personal and professional growth.</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-lg p-6 h-full">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-600">Our Impact</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                                <div class="text-green-600 text-3xl font-bold mb-2">500+</div>
+                                <div class="text-gray-600">Students Supported</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                                <div class="text-green-600 text-3xl font-bold mb-2">50+</div>
+                                <div class="text-gray-600">Community Events</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                                <div class="text-green-600 text-3xl font-bold mb-2">12+</div>
+                                <div class="text-gray-600">Football Teams</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                                <div class="text-green-600 text-3xl font-bold mb-2">1000+</div>
+                                <div class="text-gray-600">Lives Touched</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-green-50 rounded-lg p-8 shadow-sm">
+                <h3 class="text-2xl font-semibold mb-4 text-green-600">Our History</h3>
+                <p class="text-gray-700">Founded in 2024 by Titus Kimari, Tito's Foundation began as a small initiative to support underprivileged youth in Bibirioni Ward through sports. Over the years, we've expanded our programs to include education support, healthcare initiatives, and community development projects, becoming a beacon of hope for the entire ward.</p>
+                
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <i class="fas fa-calendar-check text-green-600 text-2xl mb-2"></i>
+                        <div class="font-semibold">2024</div>
+                        <div class="text-sm text-gray-600">Founded</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <i class="fas fa-futbol text-green-600 text-2xl mb-2"></i>
+                        <div class="font-semibold">First Program</div>
+                        <div class="text-sm text-gray-600">Youth Football</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <i class="fas fa-graduation-cap text-green-600 text-2xl mb-2"></i>
+                        <div class="font-semibold">2024</div>
+                        <div class="text-sm text-gray-600">Education Program</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center shadow-sm">
+                        <i class="fas fa-heartbeat text-green-600 text-2xl mb-2"></i>
+                        <div class="font-semibold">2025</div>
+                        <div class="text-sm text-gray-600">Health Initiatives</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Our Programs & Initiatives</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Community Events -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md program-card transition duration-300">
+                    <div class="h-48 bg-green-600 flex items-center justify-center relative">
+                        <img alt="Young football players from Bibirioni Ward training on a football field supported by Titos Foundation" class="rounded-lg hover-scale cursor-pointer shadow-md" height="300" src="addressing community.jpeg" width="400"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                            Community Events
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-green-700">Community Events</h3>
+                        <p class="text-gray-600 mb-4">We organize and participate in various community events to foster unity and address local challenges.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Annual cultural festivals</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Clean-up campaigns</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Community dialogues</li>
+                        </ul>
+                        <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hospital Visits -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md program-card transition duration-300">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center relative">
+                        <img alt="Young football players from Bibirioni Ward training on a football field supported by Titos Foundation" class="rounded-lg hover-scale cursor-pointer shadow-md" height="300" src="Patient discharge.jpeg" width="150"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                            Hospital Visits
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-700">Hospital Visits</h3>
+                        <p class="text-gray-600 mb-4">Our health outreach programs provide support to local healthcare facilities and patients in need.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Medical supplies donation</li>
+                            <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Patient support programs</li>
+                            <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Health awareness campaigns</li>
+                        </ul>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Education Support -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md program-card transition duration-300">
+                    <div class="h-48 bg-purple-600 flex items-center justify-center relative">
+                        <img alt="Young football players from Bibirioni Ward training on a football field supported by Titos Foundation" class="rounded-lg hover-scale cursor-pointer shadow-md" height="300" src="football foundation.jpeg" width="400"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                            Education Support
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-purple-700">Education Support</h3>
+                        <p class="text-gray-600 mb-4">Scholarships, mentorship programs, and school supplies distribution to support local students.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> Scholarship programs</li>
+                            <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> School supplies distribution</li>
+                            <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> Career mentorship</li>
+                        </ul>
+                        <a href="#" class="text-purple-600 font-semibold hover:underline flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Football Tournaments -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md program-card transition duration-300">
+                    <div class="h-48 bg-orange-600 flex items-center justify-center relative">
+                        <img alt="Young football players from Bibirioni Ward training on a football field supported by Titos Foundation" class="rounded-lg hover-scale cursor-pointer shadow-md" height="300" src="football players.jpeg" width="400"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                            Football Tournaments
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-orange-700">Football Tournaments</h3>
+                        <p class="text-gray-600 mb-4">Engaging youth through sports, promoting teamwork, discipline, and healthy lifestyles.</p>
+                        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Annual tournaments</li>
+                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Youth development</li>
+                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Talent identification</li>
+                        </ul>
+                        <a href="#football-register" class="text-orange-600 font-semibold hover:underline flex items-center">
+                            Register now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Registration Forms Section -->
+            <div class="mt-16 grid md:grid-cols-2 gap-8">
+                <!-- Football Registration -->
+                <div id="football-register" class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-700">Football Player Registration</h3>
+                    <form id="footballForm" class="space-y-4">
+                        <div>
+                            <label for="player-name" class="block text-gray-700 mb-2 font-medium">Full Name</label>
+                            <input type="text" id="player-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        </div>
+                        <div>
+                            <label for="player-age" class="block text-gray-700 mb-2 font-medium">Age</label>
+                            <input type="number" id="player-age" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        </div>
+                        <div>
+                            <label for="player-phone" class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                            <input type="tel" id="player-phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        </div>
+                        <div>
+                            <label for="player-position" class="block text-gray-700 mb-2 font-medium">Preferred Position</label>
+                            <select id="player-position" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                <option value="">Select position</option>
+                                <option value="Goalkeeper">Goalkeeper</option>
+                                <option value="Defender">Defender</option>
+                                <option value="Midfielder">Midfielder</option>
+                                <option value="Forward">Forward</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="player-experience" class="block text-gray-700 mb-2 font-medium">Football Experience</label>
+                            <textarea id="player-experience" rows="2" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Briefly describe your football background"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md">
+                            Register Now <i class="fas fa-running ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Donation Form -->
+                <div id="donate" class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-700">Support Our Cause</h3>
+                    <form id="donationForm" class="space-y-4">
+                        <div>
+                            <label for="donor-name" class="block text-gray-700 mb-2 font-medium">Your Name</label>
+                            <input type="text" id="donor-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="donor-email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                            <input type="email" id="donor-email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        <div>
+                            <label for="donation-amount" class="block text-gray-700 mb-2 font-medium">Amount (KES)</label>
+                            <input type="number" id="donation-amount" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Payment Method</label>
+                            <div class="space-y-3">
+                                <label class="flex items-center bg-gray-50 p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+                                    <input type="radio" name="payment-method" value="mpesa" class="mr-3 h-5 w-5 text-green-600" checked>
+                                    <div>
+                                        <span class="font-medium">M-Pesa</span>
+                                        <p class="text-sm text-gray-600">Pay via M-Pesa mobile money</p>
+                                        <p class="text-sm text-gray-600"><a>M-Pesa></a> number +254714881891 </p>
+                                    </div>
+                                </label>
+                                <label class="flex items-center bg-gray-50 p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+                                    <input type="radio" name="payment-method" value="paypal" class="mr-3 h-5 w-5 text-green-600">
+                                    <div>
+                                        <span class="font-medium">PayPal</span>
+                                        <p class="text-sm text-gray-600">Pay via PayPal account</p>
+                                    </div>
+                                </label>
+                                <label class="flex items-center bg-gray-50 p-3 rounded-lg cursor-pointer hover:bg-gray-100">
+                                    <input type="radio" name="payment-method" value="card" class="mr-3 h-5 w-5 text-green-600">
+                                    <div>
+                                        <span class="font-medium">Credit Card</span>
+                                        <p class="text-sm text-gray-600">Pay with Visa, Mastercard, etc.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="donation-purpose" class="block text-gray-700 mb-2 font-medium">Purpose (Optional)</label>
+                            <select id="donation-purpose" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                                <option value="">General Donation</option>
+                                <option value="education">Education Program</option>
+                                <option value="health">Health Initiative</option>
+                                <option value="sports">Sports Program</option>
+                                <option value="events">Community Events</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md">
+                            Donate Now <i class="fas fa-hand-holding-heart ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Meet Our Team</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- CEO -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" height="200" src="titus pic.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            CEO & Founder
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Titus Kimari</h3>
+                        <p class="text-green-600 font-semibold mb-3">CEO & Founder</p>
+                        <p class="text-gray-600 text-sm">Visionary leader dedicated to community transformation through sustainable initiatives. Founded Tito's Foundation in 2015 with a passion for youth empowerment.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Office Manager -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" height="200" src="james.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            Office Manager
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">James Office Manager</h3>
+                        <p class="text-green-600 font-semibold mb-3">Office Manager</p>
+                        <p class="text-gray-600 text-sm">Ensures smooth operations and coordination of all foundation activities. With 8 years of administrative experience in nonprofit organizations.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chairman -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" class="rounded-full mb-4 w-40 h-40 object-cover" height="200" src="CHAIRMAN PIC.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            Chairman
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Kimani Jebezu</h3>
+                        <p class="text-green-600 font-semibold mb-3">Chairman</p>
+                        <p class="text-gray-600 text-sm">Provides strategic direction and governance oversight for the foundation. Community leader with extensive experience in organizational management.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Secretary General -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" class="rounded-full mb-4 w-40 h-40 object-cover" height="200" src="reuben waweru.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            Secretary General
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Reuben Waweru</h3>
+                        <p class="text-green-600 font-semibold mb-3">Secretary General</p>
+                        <p class="text-gray-600 text-sm">Oversees documentation and communication for all foundation matters. Skilled in public relations and community engagement strategies.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Secretary -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" class="rounded-full mb-4 w-40 h-40 object-cover" height="200" src="MSOO PIC.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            Secretary
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Agnes Muthoni</h3>
+                        <p class="text-green-600 font-semibold mb-3">Secretary</p>
+                        <p class="text-gray-600 text-sm">Manages administrative tasks and supports foundation operations. Known for her exceptional organizational skills and attention to detail.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Treasurer -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" class="rounded-full mb-4 w-40 h-40 object-cover" height="200" src="franc mukuna.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            Treasurer
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Francis Mukuna</h3>
+                        <p class="text-green-600 font-semibold mb-3">Treasurer</p>
+                        <p class="text-gray-600 text-sm">Ensures financial accountability and proper management of resources. Certified accountant with a passion for transparent financial practices.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- IT Manager -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md team-card transition duration-300">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative">
+                        <img alt="Portrait of Titus Kimari, CEO of Titos Foundation, a middle-aged African man wearing a suit and smiling warmly" class="rounded-full mb-4 w-40 h-40 object-cover" height="200" src="jonathan.jpeg" width="200"/>
+                        <div class="absolute bottom-0 left-0 right-0 bg-green-700 text-white p-2 text-center font-medium">
+                            IT Manager
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1">Jonathan Waronja</h3>
+                        <p class="text-green-600 font-semibold mb-3">IT Manager</p>
+                        <p class="text-gray-600 text-sm">Manages all technology systems and digital platforms for the foundation. Tech enthusiast dedicated to leveraging technology for social good.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointment" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-green-700 text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Book an Appointment</h2>
+                        <p class="mb-6">Schedule a meeting with our CEO or team members to discuss partnership opportunities, community projects, or any other foundation-related matters.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-user-tie mt-1 mr-3"></i>
+                                <div>
+                                    <div class="font-semibold">Titus Kimari</div>
+                                    <div class="text-sm text-green-200">CEO & Founder</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3"></i>
+                                <span>+254 714881891</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>ceo@titosfoundation.org</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="font-bold mb-2">Office Hours</h3>
+                            <p class="text-sm">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            <p class="text-sm">Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <h3 class="text-xl font-bold mb-6 text-green-700">Appointment Request Form</h3>
+                        <form id="appointmentForm" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="appointment-name" class="block text-gray-700 mb-2 font-medium">Your Name</label>
+                                    <input type="text" id="appointment-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                </div>
+                                <div>
+                                    <label for="appointment-phone" class="block text-gray-700 mb-2 font-medium">Phone Number</label>
+                                    <input type="tel" id="appointment-phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="appointment-email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                                <input type="email" id="appointment-email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="appointment-date" class="block text-gray-700 mb-2 font-medium">Preferred Date</label>
+                                    <input type="date" id="appointment-date" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                </div>
+                                <div>
+                                    <label for="appointment-time" class="block text-gray-700 mb-2 font-medium">Preferred Time</label>
+                                    <select id="appointment-time" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                        <option value="">Select time</option>
+                                        <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                        <option value="afternoon">Afternoon (1:00 PM - 5:00 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="appointment-person" class="block text-gray-700 mb-2 font-medium">Meeting With</label>
+                                <select id="appointment-person" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                                    <option value="">Select person</option>
+                                    <option value="ceo">CEO - Titus Kimari</option>
+                                    <option value="secretary">Secretary - Agnes Muthoni</option>
+                                    <option value="education">Education Program Manager</option>
+                                    <option value="sports">Sports Program Manager</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="appointment-purpose" class="block text-gray-700 mb-2 font-medium">Purpose of Meeting</label>
+                                <textarea id="appointment-purpose" rows="3" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md">
+                                Request Appointment <i class="fas fa-calendar-check ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">What People Say About Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md testimonial-card transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl mr-4">SK</div>
+                        <div>
+                            <h4 class="font-bold">Samuel Kigamba</h4>
+                            <p class="text-sm text-gray-500">Community Member & Parent</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Tito's Foundation is the best and is transforming lives in Bibirioni. Their education programs helped my children stay in school when I couldn't afford the fees. The football program keeps my son engaged and disciplined."</p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Bibirioni Ward, Kiambu
+                    </div>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-lg p-8 shadow-md testimonial-card transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl mr-4">RK</div>
+                        <div>
+                            <h4 class="font-bold">Ras Kago</h4>
+                            <p class="text-sm text-gray-500">Youth Leader & Football Coach</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The voice of the youth. Tito's Foundation gives us a platform to express ourselves and develop our talents through sports and mentorship programs. Many young people in our ward have found purpose through their initiatives."</p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Bibirioni Ward, Kiambu
+                    </div>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Testimonials Button -->
+            <div class="text-center mt-10">
+                <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition inline-flex items-center">
+                    Read More Testimonials <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Our Gallery</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="h-48 bg-green-200 rounded-lg overflow-hidden">
+                    <img src="gang.jpeg" alt="Community event" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-blue-200 rounded-lg overflow-hidden">
+                    <img src="football players.jpeg" alt="Football tournament" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-purple-200 rounded-lg overflow-hidden">
+                    <img src="titus contrubution.jpeg" alt="Education program">
+                </div>
+                <div class="h-48 bg-orange-200 rounded-lg overflow-hidden">
+                    <img src="with gachagua.jpeg" alt="Hospital visit"  height="100">
+                </div>
+                <div class="h-48 bg-yellow-200 rounded-lg overflow-hidden">
+                    <img src="foundation team.jpeg" alt="Students learning" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-red-200 rounded-lg overflow-hidden">
+                    <img src="football foundation.jpeg" alt="Youth playing football" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-indigo-200 rounded-lg overflow-hidden">
+                    <img src="lecture.jpeg" alt="Team meeting" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-pink-200 rounded-lg overflow-hidden">
+                    <img src="community youth.jpeg" alt="Community clean-up" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-pink-200 rounded-lg overflow-hidden">
+                    <img src="classes.jpeg" alt="classes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="h-48 bg-pink-200 rounded-lg overflow-hidden">
+                        <img src="itugati.jpeg" alt="Community clean-up" class="w-full h-full object-cover">
+                    </div>
+            </div>
+            <div class="text-center mt-10">
+                <button class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition inline-flex items-center">
+                    View Full Gallery <i class="fas fa-images ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <div>
+        <section class="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-8 shadow-lg max-w-4xl mx-auto" id="video">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-300 text-center">
+             About Titos Foundation - Impact Video
+            </h2>
+            <video aria-label="Short video explaining Titos Foundation and its impact in Bibirioni Ward" class="w-full rounded-lg shadow-md hover-shadow cursor-pointer" width="400" controls="">
+             <source src="Addressing community video.mp4" type="video/mp4" />
+             Your browser does support the video tag.
+            </video>
+           </section>
+        </div>
+
+    <!-- Constitution Download -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-green-700">Our Foundation Constitution</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto mb-8">We believe in transparency and accountability. Download our constitution to understand our governance structure and operational guidelines.</p>
+            <button id="downloadConstitution" class="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-lg inline-flex items-center">
+                <a href="Titos_Foundation_Constitution.pdf" download>Download constitution</a>
+                <i class="fas fa-file-pdf mr-2 text-xl"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 text-center">
+                <h2 class="text-2xl font-bold mb-2 text-green-700">Stay Updated</h2>
+                <p class="text-gray-600 mb-6">Subscribe to our newsletter to receive updates about our programs and events</p>
+                
+                <form class="flex flex-col md:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition">
+                        Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-green-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Tito's Foundation</h3>
+                    <p class="mb-4">Empowering the Bibirioni Ward community through education, healthcare, and sports initiatives since 2015.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-green-300 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-green-300 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-green-300 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-green-300 transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-green-300 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-green-300 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-green-300 transition">About Us</a></li>
+                        <li><a href="#programs" class="hover:text-green-300 transition">Programs</a></li>
+                        <li><a href="#team" class="hover:text-green-300 transition">Our Team</a></li>
+                        <li><a href="#donate" class="hover:text-green-300 transition">Donate</a></li>
+                        <li><a href="#appointment" class="hover:text-green-300 transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Our Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-green-300 transition">Community Events</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition">Hospital Visits</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition">Education Support</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition">Football Tournaments</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition">Youth Mentorship</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition">Women Empowerment</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Tito's Foundation<br>Bibirioni Ward, Kiambu<br>Kenya</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+254 700 123456</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@titosfoundation.org</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-user mr-3"></i>
+                            <span>Secretary: Agnes Muthoni</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 mt-12 pt-8 text-center">
+                <div class="bg-green-800 py-2 overflow-hidden mb-6">
+                    <p class="marquee text-sm">Thank you for contacting Tito's Foundation. You are the best.</p>
+                </div>
+                <p>&copy; 2025 Tito's Foundation. All rights reserved.</p>
+                <p class="text-sm text-green-300 mt-2">Registered Nonprofit Organization in Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission handlers
+        document.getElementById('footballForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for registering for our football program! We will contact you soon.');
+            this.reset();
+        });
+        
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const method = document.querySelector('input[name="payment-method"]:checked').value;
+            const amount = document.getElementById('donation-amount').value;
+            alert(`Thank you for your donation of KES ${amount}! You will be redirected to ${method.toUpperCase()} payment.`);
+            this.reset();
+        });
+        
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const person = document.getElementById('appointment-person').value;
+            const date = document.getElementById('appointment-date').value;
+            
+            alert('Your appointment request has been received. Our secretary will contact you to confirm the details.');
+            this.reset();
+        });
+        
+        // Constitution download
+        document.getElementById('downloadConstitution').addEventListener('click', function() {
+            alert('The constitution document will be downloaded. Thank you for your interest in our governance.');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
